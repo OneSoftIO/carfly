@@ -1,0 +1,9 @@
+.env.*.php
+.env.php
+.env
+.idea/
+/public_html/images/
+/storage/
+/public_html/.htaccess
+/nbproject/
+laravel/node_modules/

@@ -1,0 +1,1 @@
+@if($price->hasDiscount())<span class="old-price">{{$price->price}}&euro;</span> <span class="price-discount">{{$price->discount}}</span>@else {{$price->price}} @endif
