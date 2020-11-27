@@ -44,7 +44,7 @@ class PaymentsController extends Controller
         //$this->updateOrderPrice($order->id, $totalPrice);
 
 
-        return view('order.order', compact( 'order', 'vehicle', 'services', 'pickup', 'dropoff', 'days', 'carPrice', 'onlinePayments'));
+        return view('order.order', compact( 'order', 'vehicle', 'services', 'pickup', 'dropoff', 'days', 'onlinePayments'));
     }
     public function updateOrderPrice($id, $price){
         $order = Order::find($id);
