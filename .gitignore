@@ -7,3 +7,4 @@
 /public_html/.htaccess
 /nbproject/
 laravel/node_modules/
+laravel/vendor
