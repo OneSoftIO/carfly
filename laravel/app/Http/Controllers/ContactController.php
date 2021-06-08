@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Mail;
 use App\Settings;
 use App\Subscribers;
+use Illuminate\Http\Request;
+use Mail;
+
 class ContactController extends Controller
 {
 
-    public function Page(){
+    public function Page()
+    {
         return view('contact.contact');
     }
-    public function SendMail(Request $request){
+
+    public function SendMail(Request $request)
+    {
         $adminEmail = Settings::where('option_name', 'email')->first()->option_value;
 
         $this->validate($request, [
@@ -21,16 +25,23 @@ class ContactController extends Controller
             'email' => 'required|email'
         ]);
         $response = $request->captcha;
-        $secret = config('app.recaptcha');
+        $secret = '6Ld54R0bAAAAAAbr8zIcHY0dcFIjC1XyRVFVyj2L';
 
-        $verify=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}");
+        $url = "https://www.google.com/recaptcha/api/siteverify?";
+        $vars = 'secret=' . $secret . '&response=' . $response;
 
-        $captcha_success=json_decode($verify);
+        $con = curl_init($url);
+        curl_setopt($con, CURLOPT_POST, 1);
+        curl_setopt($con, CURLOPT_POSTFIELDS, $vars);
+        curl_setopt($con, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($con, CURLOPT_HEADER, 0);
+        curl_setopt($con, CURLOPT_RETURNTRANSFER, 1);
+        $captcha_success = json_decode(curl_exec($con));
 
         if ($captcha_success->success === false)
             return response()->json(['status' => false, 'message' => trans('page.validate_recaptcha')]);
 
-        $data =  array(
+        $data = array(
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'content' => $request->input('message'),

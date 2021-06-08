@@ -18,7 +18,7 @@
 <div class="middle-box text-center loginscreen ">
     <h3>CarFly</h3>
     @yield('content')
-    <p class="m-t"> <small>Sprendimas: <a target="_blank" href="//kuriutinklapius.lt">Kuriutinklapius.lt</a> &copy; 2018</small> </p>
+    <p class="m-t"> <small>&copy; {{ date('Y') }}</small> </p>
 </div>
 </body>
 </html>

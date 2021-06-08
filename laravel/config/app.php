@@ -249,7 +249,7 @@ return [
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ],
-    'recaptcha' => '6LdLkFEUAAAAAEMYcLHu1XV8gGWqzbDWjzBWfaMv',
+    'recaptcha' => '6Ld54R0bAAAAAAbr8zIcHY0dcFIjC1XyRVFVyj2L',
     'versions' => [
         'css' => 1.1,
         'js' => 1.2
