@@ -33,7 +33,7 @@ return [
         'name' => 'UAB Top Limo',
         'address' => 'Respublikos 28, LT-35174, Panevėžys',
         'phone' => '+370 640 80000',
-        'copyrights' => '© 2018 Visos teisės saugomos.',
+        'copyrights' => '© 2021 Visos teisės saugomos.',
         'url' => 'www.carfly.lt',
     ]
 ];

@@ -122,7 +122,7 @@ return [
         '3-headline' => 'Greitas atsiėmimas',
         '3-content' => 'Greitas ir patogus automobilio atsiėmimas vos tik nusileidus lėktuvui. Tam, kad savo kelionę galėtumėte pratęsti kuo greičiau, mūsų darbuotojas pasitiks Jus atvykimo salėje ir palydės iki nuomai jau paruošto automobilio. Kantriai lauksime Jūsų bet kuriuo paros metu, lėktuvui vėluojant ar atvykus per anksti, o formalumus sutvarkysime ypač greitai. Mūsų tikslas - Jūsų patogumas!',
     ],
-    'copyright' => '&copy; 2018 Visos teisės saugomos',
+    'copyright' => '&copy; 2021 Visos teisės saugomos',
     'company_code' => 'Įmonės kodas',
     'company_name' => 'Įmonės pavadinimas',
     'success_reservation' => 'Dėkojame už rezervaciją! Rezervacija įsigalios po vadybininko patvirtinimo.',
