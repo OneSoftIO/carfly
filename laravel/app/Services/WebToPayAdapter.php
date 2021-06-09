@@ -100,8 +100,7 @@ class WebToPayAdapter
                 throw new \Exception('Invalid order id');
             }
 
-            //@todo: patikrinti, ar užsakymo suma ir valiuta atitinka $amount ir $currency
-            if ($amount != ($order->price * 100)) {
+            if ($amount != ($order->total_price * 100)) {
                 throw new \Exception('amount != order price');
             }
 
